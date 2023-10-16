@@ -4,6 +4,7 @@ import sys
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
 from JsonDataReader import JsonDataReader
+from CalcQuartile import CalcQuartile
 
 
 def get_path_from_arguments(args) -> str:
@@ -28,6 +29,13 @@ def main():
 
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+
+    qr = CalcQuartile(rating)
+    print("Quartile: ", qr.calc_last_quartile())
+
+
+    #qr.show_all_last_quartile_students(rating)
+    #print("Students in Quartile: ", students_quartile)
 
 
 if __name__ == "__main__":
