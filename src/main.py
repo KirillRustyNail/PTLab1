@@ -30,12 +30,12 @@ def main():
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
 
-    qr = CalcQuartile(rating)
-    print("Quartile: ", qr.calc_last_quartile())
+    qr = CalcQuartile(rating).calc_last_quartile()
+    print("Quartile: ", qr)
 
-
-    #qr.show_all_last_quartile_students(rating)
-    #print("Students in Quartile: ", students_quartile)
+    students_in_last_qr = CalcQuartile(rating).\
+        show_all_students_last_quartile(qr)
+    print("Students in Quartile: ", students_in_last_qr)
 
 
 if __name__ == "__main__":
